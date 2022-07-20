@@ -87,21 +87,19 @@ body {
 
 .header-banner {
    position: relative;
-   width: 50%;
 
 }
 
 .header-banner img {
    width: 100%;
-   height: 85vh;
-   width: 100%;
+   height: 75vh;
    padding-top: 20px;
 }
 
 /* main transfer section design */
 .nav-left {
    width: 29%;
-   height: 210px;
+   height: 280px;
    display: flex;
    flex-direction: column;
    padding: 2%;
@@ -110,13 +108,18 @@ body {
    margin-right: 20px;
 }
 
+.nav-left a {
+    text-decoration: none;
+    color: #000;
+}
+
 .nav-left button {
    border: 1px solid #fff;
    margin: 6% 0;
    padding: 3%;
    font-size: 1.3rem;
    border-radius: 10px;
-   color: #000
+   color: #000;
 }
 
 .nav-left button.active {
@@ -128,6 +131,7 @@ body {
 /* transfer right section style */
 .main-transfer {
    display: flex;
+   justify-content: space-between;
 }
 
 .transfer-right {
@@ -167,6 +171,15 @@ button.thumbnail-btn {
 .duration-comment span:nth-child(2) {
    margin-right: 30px;
 }
+/* upcoming match styles */
+.up-thumbnail{
+   padding: 28px 20px 0 20px;
+   display: flex;
+   align-items: center;
+}
+.img.up-thumbnail span {
+   padding: 0 7px;
+}
 
 /* tablet mode view all button styles */
 .view-all {
@@ -194,6 +207,9 @@ footer{
    background-color: #000;
    color: #fff;
    text-align: center;
+}
+hr{
+  opacity: 0.2;
 }
 .container h1{
    padding: 30px 0;
@@ -279,6 +295,9 @@ background-color: #000;
    .thumbnail img {
       width: 100%;
    }
+   .thumbnail-sumary{
+      text-align: center;
+   }
    .button{
       width: 70%;
    }
@@ -298,13 +317,13 @@ background-color: #000;
    
 }
 
+
 /* tablet mode */
 @media screen and (min-width: 577px) and (max-width: 992px) {
    .top-header{
       grid-template-columns: repeat(2, 1fr);
    }
    .header-description {
-      border: 1px solid;
       width: 200px;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -341,13 +360,19 @@ background-color: #000;
    #dis-none {
       display: none;
    }
+   .view-all:hover #dis-done{
+      display: block;
+   }
 
    .view-all {
       display: block;
       width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
    }
    .button{
-      width: 90%;
+      width: 70%;
    }
 
  
